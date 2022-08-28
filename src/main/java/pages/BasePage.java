@@ -36,6 +36,7 @@ import org.testng.annotations.BeforeClass;
 
 import com.google.common.io.Files;
 
+import io.qameta.allure.Step;
 import utilities.ReadConfig;
 
 public class BasePage {
@@ -71,6 +72,7 @@ public class BasePage {
     public WebDriver driver;
     
     @BeforeClass
+    @Step("Launch driver and go to url")
     public  void launchDriver() {
         if(browser.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver",readConfig.getChromePath());
@@ -137,7 +139,7 @@ public class BasePage {
     
     @AfterClass
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
 }

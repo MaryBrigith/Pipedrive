@@ -7,6 +7,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.qameta.allure.Step;
+
 public class LoginPage extends BasePage{
 	
 	 public WebDriver ldriver;
@@ -39,15 +41,17 @@ public class LoginPage extends BasePage{
     @CacheLookup
     WebElement Submit;
     
+    @Step("Click on login button")
     public void clickLoginButton() {
     	loginButton.click();
     }
 
-    
+    @Step("Set email")
     public void setEmail(String email) {
     	Email.sendKeys(email);
     }
 
+    @Step("Set password")
     public void setPassword(String password) {
         Password.sendKeys(password);
     }

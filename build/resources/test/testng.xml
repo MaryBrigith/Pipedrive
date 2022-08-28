@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="pipedriveUI.UI_TC1_AddDeal"/>
+      <class name="pipedriveUI.UI_TC2_scheduleMeeting"/>
+      <class name="pipedriveUI.UI_TC3_SetExpectedCloseDate"/>
+      <class name="pipedriveUI.UI_TC4_DeleteDeal"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

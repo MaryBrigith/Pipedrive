@@ -19,12 +19,14 @@ import pages.AddDealsPage;
 import pages.LoginPage;
 import utilities.Log;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import pages.BasePage;
 
 @Listeners(io.qameta.allure.testng.AllureTestNg.class)
-@Story("Add new deal")
+@Feature("Add new deal")
+
 public class UI_TC1_AddDeal extends BasePage {
 	
 	LoginPage loginPage;
@@ -32,7 +34,7 @@ public class UI_TC1_AddDeal extends BasePage {
 
 	
 	@Test(priority = 1) 
-	@Step("Login")
+	@Story("Login")
     @Description("User Login")
     public void loginTest() throws IOException {
         loginPage = new LoginPage(driver);
@@ -54,16 +56,15 @@ public class UI_TC1_AddDeal extends BasePage {
     }
 	
 	@Test(priority = 2)
-	@Step("Add deal")
+	@Story("Add new deal")
     @Description("User add new deal")
 
     public void addDeal() throws IOException, InterruptedException {
         
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(addDealsPage.getDeal()));
-		Log.info("Click on dd deal button");
+		explicitWait(addDealsPage.getDeal());
+		Log.info("Click on add deal button");
 		addDealsPage.clickOnDealButton();
-		Assert.assertTrue(driver.getTitle().equals("Deals"));
+		Assert.assertTrue(driver.getTitle().equals("Pipeline - Deals"));
 		Log.info("New deal page opened");
 		Log.info("Set contact person");
 		addDealsPage.setContactPerson(contactPerson);

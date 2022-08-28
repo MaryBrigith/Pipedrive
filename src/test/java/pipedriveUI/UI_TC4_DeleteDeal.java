@@ -21,12 +21,13 @@ import pages.AddDealsPage;
 import pages.LoginPage;
 import pages.ManageDealPage;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import pages.BasePage;
 
 @Listeners(io.qameta.allure.testng.AllureTestNg.class)
-@Story("Delete a deal")
+@Feature("Delete a deal")
 public class UI_TC4_DeleteDeal extends BasePage {
 	
 	LoginPage loginPage;
@@ -35,7 +36,7 @@ public class UI_TC4_DeleteDeal extends BasePage {
 
 	
 	@Test(priority = 1) 
-	@Step("Login")
+	@Story("Login")
     @Description("User Login")
     public void loginTest() throws IOException {
         loginPage = new LoginPage(driver);
@@ -55,7 +56,7 @@ public class UI_TC4_DeleteDeal extends BasePage {
     }
 	
 	@Test(priority = 2)
-	@Step("Delete Deal")
+	@Story("User Delete Deal from pipeline")
     @Description("User delete  deal from pipeline")
 
     public void addDeal() throws IOException, InterruptedException {

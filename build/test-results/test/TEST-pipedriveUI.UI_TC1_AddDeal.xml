@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pipedriveUI.UI_TC1_AddDeal" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-08-28T22:43:58" hostname="DESKTOP-CUL8PQA" time="41.277">
+  <properties/>
+  <testcase name="loginTest" classname="pipedriveUI.UI_TC1_AddDeal" time="3.781"/>
+  <testcase name="addDeal" classname="pipedriveUI.UI_TC1_AddDeal" time="37.246"/>
+  <system-out><![CDATA[Pipedrive
+mobile selected
+email selected
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 103.0.5060.134 (8ec6fce403b3feb0869b0732eda8bd95011d333c-refs/branch-heads/5060@{#1262}) on port 51909
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1661726626.607][WARNING]: This version of ChromeDriver has not been tested with Chrome version 104.
+Aug 29, 2022 4:13:49 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Aug 29, 2022 4:13:50 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found exact CDP implementation for version 104
+log4j:WARN No appenders could be found for logger (utilities.Log).
+log4j:WARN Please initialize the log4j system properly.
+]]></system-err>
+</testsuite>

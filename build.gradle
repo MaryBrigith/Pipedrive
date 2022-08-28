@@ -38,7 +38,7 @@ tasks.named('test') {
    
 	  useTestNG(){
         useDefaultListeners = true
-        suites 'src/test/resources/testData.xml'
+        suites 'src/test/resources/testng.xml'
     }
     systemProperties System.properties
     

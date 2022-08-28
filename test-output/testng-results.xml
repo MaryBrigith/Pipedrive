@@ -2,52 +2,64 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-27T16:44:12 IST" name="Default suite" finished-at="2022-08-27T16:45:18 IST" duration-ms="66084">
+  <suite started-at="2022-08-29T03:37:24 IST" name="Default suite" finished-at="2022-08-29T03:38:35 IST" duration-ms="71928">
     <groups>
     </groups>
-    <test started-at="2022-08-27T16:44:12 IST" name="Default test" finished-at="2022-08-27T16:45:18 IST" duration-ms="66084">
-      <class name="pipedriveUI.UI_TC4_DeleteDeal">
-        <test-method is-config="true" signature="launchDriver()[pri:0, instance:pipedriveUI.UI_TC4_DeleteDeal@5a755cc1]" started-at="2022-08-27T16:44:12 IST" name="launchDriver" finished-at="2022-08-27T16:44:55 IST" duration-ms="42348" status="PASS">
+    <test started-at="2022-08-29T03:37:24 IST" name="Default test" finished-at="2022-08-29T03:38:35 IST" duration-ms="71928">
+      <class name="pipedriveUI.UI_TC1_AddDeal">
+        <test-method is-config="true" signature="launchDriver()[pri:0, instance:pipedriveUI.UI_TC1_AddDeal@602e0143]" started-at="2022-08-29T03:37:24 IST" name="launchDriver" finished-at="2022-08-29T03:37:59 IST" duration-ms="34991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchDriver -->
-        <test-method signature="loginTest()[pri:1, instance:pipedriveUI.UI_TC4_DeleteDeal@5a755cc1]" started-at="2022-08-27T16:44:55 IST" name="loginTest" finished-at="2022-08-27T16:44:58 IST" duration-ms="3214" status="PASS">
+        <test-method signature="loginTest()[pri:1, instance:pipedriveUI.UI_TC1_AddDeal@602e0143]" started-at="2022-08-29T03:37:59 IST" name="loginTest" finished-at="2022-08-29T03:38:03 IST" duration-ms="3716" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="addDeal()[pri:2, instance:pipedriveUI.UI_TC4_DeleteDeal@5a755cc1]" started-at="2022-08-27T16:44:58 IST" name="addDeal" finished-at="2022-08-27T16:45:18 IST" duration-ms="19643" status="FAIL">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
+        <test-method signature="addDeal()[pri:2, instance:pipedriveUI.UI_TC1_AddDeal@602e0143]" started-at="2022-08-29T03:38:06 IST" name="addDeal" finished-at="2022-08-29T03:38:35 IST" duration-ms="29054" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[unexpected alert open: {Alert text : Are you sure you want to delete this deal?}
-  (Session info: chrome=104.0.5112.102): Are you sure you want to delete this deal?
+              <![CDATA[element not interactable
+  (Session info: chrome=104.0.5112.102)
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-CUL8PQA', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0844529a2b60cbf050eec9121c31340e, getElementText {id=a0ed8fe5-77eb-4255-8837-a0c359a16d8f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62216}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62216/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0844529a2b60cbf050eec9121c31340e)] -> xpath: //div[contains(@class,'cui5StyleDropdown ')]//div[@class='cui5-option ']/span]
-Session ID: 0844529a2b60cbf050eec9121c31340e]]>
+Command: [6ed54113b1f19574a061dedab00842bf, sendKeysToElement {id=2c4c900e-8c11-45a3-9c33-8adef23eabac, value=[Ljava.lang.CharSequence;@43f1bb92}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53755}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53755/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (6ed54113b1f19574a061dedab00842bf)] -> xpath: (//div[@class='cui5-input__box']/input)[7]]
+Session ID: 6ed54113b1f19574a061dedab00842bf]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Are you sure you want to delete this deal?}
-  (Session info: chrome=104.0.5112.102): Are you sure you want to delete this deal?
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=104.0.5112.102)
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-CUL8PQA', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0844529a2b60cbf050eec9121c31340e, getElementText {id=a0ed8fe5-77eb-4255-8837-a0c359a16d8f}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62216}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62216/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0844529a2b60cbf050eec9121c31340e)] -> xpath: //div[contains(@class,'cui5StyleDropdown ')]//div[@class='cui5-option ']/span]
-Session ID: 0844529a2b60cbf050eec9121c31340e
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:131)
+Command: [6ed54113b1f19574a061dedab00842bf, sendKeysToElement {id=2c4c900e-8c11-45a3-9c33-8adef23eabac, value=[Ljava.lang.CharSequence;@43f1bb92}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53755}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53755/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (6ed54113b1f19574a061dedab00842bf)] -> xpath: (//div[@class='cui5-input__box']/input)[7]]
+Session ID: 6ed54113b1f19574a061dedab00842bf
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:207)
-at pages.ManageDealPage.deleteDeal(ManageDealPage.java:388)
-at pipedriveUI.UI_TC4_DeleteDeal.addDeal(UI_TC4_DeleteDeal.java:66)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+at pages.AddDealsPage.setPhone(AddDealsPage.java:164)
+at pipedriveUI.UI_TC1_AddDeal.addDeal(UI_TC1_AddDeal.java:78)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,15 +90,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addDeal -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:pipedriveUI.UI_TC4_DeleteDeal@5a755cc1]" started-at="2022-08-27T16:45:18 IST" name="tearDown" finished-at="2022-08-27T16:45:18 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pipedriveUI.UI_TC1_AddDeal@602e0143]" started-at="2022-08-29T03:38:35 IST" name="tearDown" finished-at="2022-08-29T03:38:35 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- pipedriveUI.UI_TC4_DeleteDeal -->
+      </class> <!-- pipedriveUI.UI_TC1_AddDeal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -7,6 +7,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.qameta.allure.Step;
+
 public class AddDealsPage extends BasePage {
 	
 
@@ -101,13 +103,16 @@ public class AddDealsPage extends BasePage {
 		return Deal;
 	}
 	
+	public WebElement getContactPerson() {
+		return ContactPerson;
+	}
 	
-	
+	@Step("Click on deal button")
     public void clickOnDealButton() {
-        getDeal().click();
+		Deal.click();
     }
 
-   
+	@Step("Set Phone Type")
     public void setPhoneType(String phonetype) {
     	PhoneTypeDropdown.click();
     	for(WebElement e : PhoneType) {
@@ -118,6 +123,7 @@ public class AddDealsPage extends BasePage {
     	}System.out.println("mobile selected");
     }
     
+	@Step("Set email type")
     public void setEmailType(String emailtype) {
     	EmailTypeDropdown.click();
     	for(WebElement e : EmailType) {
@@ -128,18 +134,22 @@ public class AddDealsPage extends BasePage {
     	}System.out.println("email selected");
     }
     
+	@Step("Set Contact Person")
     public void setContactPerson(String contact) {
         ContactPerson.sendKeys(contact);
     }
     
+	@Step("Set Organization")
     public void setOrganization(String org) {
     	Organization.sendKeys(org);
     }
     
+	@Step("Set Deal Value")
     public void setDealValue(String value) {
     	DealValue.sendKeys(value);
     }
     
+	@Step("Set currency")
     public void setCurrency(String currency) {
     	CurrencyTypeDropdown.click();
     	for(WebElement e : CurrencyType) {
@@ -149,28 +159,32 @@ public class AddDealsPage extends BasePage {
     	}
     }
     	
+	@Step("Set Phone")
     public void setPhone(String phone) {
     	Phone.sendKeys(phone);
     }
     
-    
+	@Step("Set email")
     public void setEmail(String email) {
     	Email.sendKeys(email);
     }
     
-
+	@Step("Click on save button")
     public void clickSaveButton () {
     	SaveButton.click();
     }
 
+	@Step("Click cancel button")
     public void clickCancelButton () {
     	CancelButton.click();
     }
 
+	@Step("Click on add products")
     public void clickAddProducts () {
     	AddProducts.click();
     }
 
+	@Step("Set Item")
     public void setItem (String productItem) {
     	Item.sendKeys(productItem);
     }

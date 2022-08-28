@@ -15,6 +15,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import pages.BasePage;
@@ -24,7 +25,7 @@ import pages.ManageDealPage;
 import utilities.Log;
 
 @Listeners(io.qameta.allure.testng.AllureTestNg.class)
-@Story("Schedule appointment")
+@Feature("Schedule an appointment")
 public class UI_TC2_scheduleMeeting extends BasePage{
 	
 	LoginPage loginPage;
@@ -32,7 +33,7 @@ public class UI_TC2_scheduleMeeting extends BasePage{
 	ManageDealPage manageDealPage;
 	
 	@Test(priority = 1)  
-	@Step("User Login")
+	@Story("User Login")
     @Description("User Login")
     public void loginTest() throws IOException {
 		loginPage = new LoginPage(driver);
@@ -52,7 +53,7 @@ public class UI_TC2_scheduleMeeting extends BasePage{
     }
 	
 	@Test(priority = 2)
-	@Step("Schedule an appointment")
+	@Story("User schedule new appointment")
     @Description("User scheduling new appointment")
 
     public void scheduleAppointment() throws IOException, InterruptedException {

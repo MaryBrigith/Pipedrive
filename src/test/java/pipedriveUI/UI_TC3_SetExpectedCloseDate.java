@@ -21,12 +21,13 @@ import pages.LoginPage;
 import pages.ManageDealPage;
 import utilities.Log;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import pages.BasePage;
 
 @Listeners(io.qameta.allure.testng.AllureTestNg.class)
-@Story("Set Expected CloseDate")
+@Feature("Set Expected CloseDate")
 public class UI_TC3_SetExpectedCloseDate extends BasePage {
 	
 	LoginPage loginPage;
@@ -36,7 +37,7 @@ public class UI_TC3_SetExpectedCloseDate extends BasePage {
 
 	
 	@Test(priority = 1) 
-	@Step("Login")
+	@Story("User Login")
     @Description("User Login")
     public void loginTest() throws IOException {
         loginPage = new LoginPage(driver);
@@ -56,7 +57,7 @@ public class UI_TC3_SetExpectedCloseDate extends BasePage {
     }
 	
 	@Test(priority = 2)
-	@Step("Set Expected Close Date")
+	@Story("User Set Expected Close Date for the deal")
     @Description("Set Expected Close Date")
 
     public void setExpectedCloseDate() throws IOException, InterruptedException, ParseException {
@@ -72,7 +73,7 @@ public class UI_TC3_SetExpectedCloseDate extends BasePage {
     }
 	
 	@Test(priority = 3)
-	@Step("Change Expected Close Date")
+	@Story("User Change Expected Close Date")
     @Description("Change Expected Close Date")
 
     public void changeExpectedCloseDate() throws IOException, InterruptedException, ParseException {
@@ -86,7 +87,7 @@ public class UI_TC3_SetExpectedCloseDate extends BasePage {
     }
 	
 	@Test(priority = 4)
-	@Step("Delete Expected Close Date")
+	@Story("User Delete Expected Close Date")
     @Description("Delete Expected Close Date")
 
     public void deleteExpectedCloseDate() throws IOException {

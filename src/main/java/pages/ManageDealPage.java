@@ -17,6 +17,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import io.qameta.allure.Step;
+
 public class ManageDealPage extends BasePage {
 	
 	public ManageDealPage(WebDriver driver) {
@@ -221,23 +223,27 @@ public class ManageDealPage extends BasePage {
 		return userLabel;
 	}
     
+    @Step("Go to my deal")
     public void clickMyDeal() {
     	MyDeal.click();
     }
     
+    @Step("Click on notes")
     public void clickOnNotes( ) {
     	Notes.click();
     }
    
-    
+    @Step("Sve notes")
     public void clickOnNotesSave() {
     	NotesSave.click();
     }
     
+    @Step("Set notes")
     public void setNotes(String notes) {
     	NotesEdit.sendKeys(notes);
     }
     
+    @Step("Go to activity")
     public void clickActivity() {
     	Activity.click();
     }
@@ -250,10 +256,12 @@ public class ManageDealPage extends BasePage {
     	ActivityMeetingButton.click();
     }
     
+    @Step("Set meeting title")
     public void setMeetingTitle(String title) {
     	ActivityMeetingInput.sendKeys(title);
     }
     
+    @Step("Set meeting start date")
     public void setMeetingStartDate(String startDate) {
     	ActivityMeetingStartDate.sendKeys(startDate);
     }
@@ -266,10 +274,12 @@ public class ManageDealPage extends BasePage {
     	ActivityMeetingEndTime.sendKeys(endTime);
     }
     
+    @Step("Set meeting end date")
     public void setMeetingEndDate(String endDate) {
     	ActivityMeetingEndDate.sendKeys(endDate);
     }
     
+    @Step("Set meeting guests")
     public void setMeetingGuests(List<String> meetingGuests) {
     	MeetingGuests.click();
 		MeetingGuestsLink.click();
@@ -280,6 +290,7 @@ public class ManageDealPage extends BasePage {
     	MeetingGuestsInput.sendKeys(Keys.TAB);
     }
     
+    @Step("Set meeting loction")
     public void setMeetingLocation(String location) {
     	MeetingLocation.click();
     	MeetingLocationInput.sendKeys(location);
@@ -289,6 +300,7 @@ public class ManageDealPage extends BasePage {
     	
     }
     
+    @Step("Set meeting description")
     public void setMeetingDescription(String description) {
     	MeetingDescription.click();
     	DescriptionItalicToolbar.click();
@@ -296,6 +308,7 @@ public class ManageDealPage extends BasePage {
     	
     }
     
+    @Step("Set meeting notes")
     public void setMeetingNotes(String notes) {
     	MeetingNotes.click();
     	NotesBoldToolbar.click();
@@ -303,11 +316,13 @@ public class ManageDealPage extends BasePage {
     	
     }
     
+    @Step("Sve meeting")
     public void clickSaveButton() {
     	SaveButton.click();
     	
     }
     
+    @Step("Verify planned meeting")
     public void verifyPlannedMeeting(String meetingTitle) {
     	for(WebElement e : PlannedActivities) {
     		System.out.println(e.getText());
@@ -317,6 +332,7 @@ public class ManageDealPage extends BasePage {
     	}
     }
     
+    @Step("Mark meeting as done")
     public void clickMarkAsDoneCheckBox(WebDriver webDriver) {
         webDriver.findElement(By.xpath("//div[contains(@class,'flowComponent activity ')]//a[text()='"+meetingTitle+"']/parent::span//preceding-sibling::span")).click();    	
     }
@@ -326,6 +342,7 @@ public class ManageDealPage extends BasePage {
     	
     }
     
+    @Step("Verify meeting moved to Done")
     public void verifyDoneMeeting(WebDriver webDriver) {
     	Assert.assertTrue(webDriver.findElement(By.xpath("//div[@class='flowContainer done']//div//a[text()='"+meetingTitle+"']")).isDisplayed() );   	
     }
@@ -335,16 +352,19 @@ public class ManageDealPage extends BasePage {
     	
     }
     
+    @Step("Dlete done activity")
     public void clickDoneActivityDelete() {
     	DoneActivityDelete.click();
     	ConfirmDeleteButton.click();
     	
     }
     
+    @Step("Verify meeting deleted")
     public void verifyMeetingDeleted(WebDriver webDriver) {
     	Assert.assertEquals(0,webDriver.findElements(By.xpath("//div[@class='flowContainer done']//div//a[text()='"+meetingTitle+"']")).size() );   	
     }
     
+    @Step("Set expected close date")
     public void setExpectedCloseDate(String closeDate) {
     	ExpectedCloseDate.click();
     	CloseDateInput.sendKeys(closeDate);
@@ -354,7 +374,7 @@ public class ManageDealPage extends BasePage {
     	
     }
     
-    
+    @Step("verify expected close date")
     public void verifyExpectedCloseDate(String closeDate) throws ParseException {
         SimpleDateFormat dt = new SimpleDateFormat("MM/dd/yyyy");
         Date date = dt.parse(closeDate);
@@ -363,6 +383,7 @@ public class ManageDealPage extends BasePage {
     	Assert.assertEquals(newstring, setExpectedCloseDate.getText());
     }
     
+    @Step("chnge expectd close date")
     public void changeExpectedCloseDate(String closeDate) throws ParseException {
     	explicitWait(setExpectedCloseDate);
     	setExpectedCloseDate.click();
@@ -371,17 +392,18 @@ public class ManageDealPage extends BasePage {
     	CloseDateSaveButton.click();
     }
     
-    
+    @Step("Delete expected close date")
     public void deleteExpectedCloseDate() {
     	setExpectedCloseDate.click();
     	CloseDateDeleteButton.click();
     }
     
+    @Step("Veridy close date removed")
     public void verifyCloseDateDeleted() {
     	Assert.assertTrue(ExpectedCloseDate.isDisplayed());
     }
     
-    
+    @Step("Delete deal")
     public void deleteDeal() {
     	PipeButton.click();
     	for(WebElement e : PipeButtonOptions) {
