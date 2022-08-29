@@ -1,5 +1,5 @@
 # Pipedrive
-UI and API automtion of bookstore application
+UI automtion of Pipedrive Deals 
 website  https://pipedrive.com/
 
 ## Technology:
