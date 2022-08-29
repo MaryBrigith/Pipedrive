@@ -3,11 +3,10 @@ UI automtion of Pipedrive Deals
 website  https://pipedrive.com/
 
 ## Technology:
-- Tool : selenium
+- Tool : selenium, Testng
 - IDE : eclipse
 - Build Tool : Gradle
 - Language : Java
-- API Framework : RestAssured
 - Report : Allure
 
 ## Instruction:
@@ -17,9 +16,8 @@ website  https://pipedrive.com/
 ```sh
 gradle clean test
 ```
-4. API script will run
-5. selenium will open browser for UI Automtion
-6. To view Report 
+4. selenium will open browser for UI Automtion
+5. To view Report 
 ```sh
   allure serve
 ```
