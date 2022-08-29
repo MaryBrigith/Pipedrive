@@ -72,21 +72,8 @@ public class UI_TC3_SetExpectedCloseDate extends BasePage {
 
     }
 	
-	@Test(priority = 3)
-	@Story("User Change Expected Close Date")
-    @Description("Change Expected Close Date")
-
-    public void changeExpectedCloseDate() throws IOException, InterruptedException, ParseException {
-		
-		manageDealPage = new ManageDealPage(driver);
-		explicitWait(manageDealPage.getUserLabel());
-		manageDealPage.changeExpectedCloseDate(changeDealCloseDate);
-		Log.info("Chnged expected close date");
-        
-
-    }
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	@Story("User Delete Expected Close Date")
     @Description("Delete Expected Close Date")
 
